@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 });
 
 if (process.env.MYSQL_CERT) {
-  connection.ssl = { cs: fs.readFileSync("periamma-server.crt.pem") };
+  connection.ssl = { cs: fs.readFileSync("DigiCertGlobalRootCA.crt.pem") };
 }
 
 export default connection;

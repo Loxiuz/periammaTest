@@ -18,6 +18,8 @@ function errorResult(err, result, response) {
     response.json(result);
   }
 }
+app.get("/", (req, res) => res.json({ message: "Connection made!" }));
+
 /* ------------ Sponsors ------------ */
 app.get("/sponsors", async (req, res) => {
   connection.query(
